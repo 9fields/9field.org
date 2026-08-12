@@ -1,6 +1,6 @@
 # 9field.org
 
-九野的品牌、产品与技术门户。公司正式主站与权威企业信息位于 [`9field.cn`](https://9field.cn)。
+九野的品牌、产品与技术门户。公司正式主站与权威企业信息位于 [`9fields.cn`](https://9fields.cn/)。
 
 ## 本地开发
 
