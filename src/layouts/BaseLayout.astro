@@ -8,7 +8,7 @@ interface Props {
 }
 
 const {
-  title = `${site.name} · ${site.latinName}`,
+  title = `${site.companyName}（${site.shortName}）· ${site.portalName}`,
   description = site.description,
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -29,7 +29,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:site_name" content={`${site.name} ${site.latinName}`} />
+    <meta property="og:site_name" content={`${site.companyName}（${site.shortName}）· ${site.portalName}`} />
     <meta name="twitter:card" content="summary" />
     <title>{title}</title>
   </head>

@@ -1,8 +1,10 @@
 export const site = {
-  name: "九野",
-  latinName: "9FIELD",
+  companyName: "九野通衢",
+  shortName: "九野",
+  latinTrademark: "JiuyeTongqu",
+  portalName: "9field.org",
   description:
-    "九野的品牌、产品与技术门户。我们在这里持续发布正在构建的项目、开放成果与思考。",
+    "九野通衢（简称“九野”）的品牌、产品与技术门户。我们在这里持续发布正在构建的项目、开放成果与思考。",
   corporateUrl: "https://9fields.cn/",
   publicGithubUrl: "https://github.com/9fields",
   internalGithubUrl: "https://github.com/JiuyeTongqu",
@@ -34,7 +36,7 @@ export const githubOrganizations = [
   },
   {
     name: "JiuyeTongqu",
-    description: "公司与内部工程",
+    description: "九野通衢公司与内部工程",
     url: site.internalGithubUrl,
   },
 ] as const;

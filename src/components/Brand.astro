@@ -3,10 +3,12 @@ interface Props {
   inverted?: boolean;
 }
 
+import { site } from "../data/site";
+
 const { inverted = false } = Astro.props;
 ---
 
-<a class:list={["brand", { "brand--inverted": inverted }]} href="/" aria-label="九野首页">
-  <span class="brand__han">九野</span>
-  <span class="brand__latin">9FIELD</span>
+<a class:list={["brand", { "brand--inverted": inverted }]} href="/" aria-label={`${site.companyName}（简称${site.shortName}）首页`}>
+  <span class="brand__han">{site.shortName}</span>
+  <span class="brand__latin">{site.latinTrademark}</span>
 </a>

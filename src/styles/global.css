@@ -109,7 +109,7 @@ svg {
   margin-top: 8px;
   font-size: 9px;
   font-weight: 500;
-  letter-spacing: 0.52em;
+  letter-spacing: 0.14em;
 }
 
 .site-header {
@@ -599,6 +599,12 @@ svg {
 
 .site-footer__bottom p {
   margin: 0;
+}
+
+.site-footer__rights {
+  display: grid;
+  gap: 8px;
+  max-width: 720px;
 }
 
 .site-footer__bottom a {
