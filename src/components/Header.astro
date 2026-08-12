@@ -1,0 +1,65 @@
+---
+import ArrowIcon from "./ArrowIcon.astro";
+import Brand from "./Brand.astro";
+import { site } from "../data/site";
+---
+
+<header class="site-header" data-header>
+  <div class="site-header__inner shell">
+    <Brand inverted />
+    <nav class="site-nav" aria-label="主要导航" data-nav>
+      <a href="#home">首页</a>
+      <a href="#about">关于九野</a>
+      <a href="#open">开放项目</a>
+      <a href="#thinking">技术与文章</a>
+    </nav>
+    <a class="corporate-link" href={site.corporateUrl} rel="external">
+      <span>访问公司主站</span>
+      <ArrowIcon direction="external" />
+    </a>
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="打开导航"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+      data-nav-toggle
+    >
+      <span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="移动导航" data-mobile-nav hidden>
+    <a href="#home">首页</a>
+    <a href="#about">关于九野</a>
+    <a href="#open">开放项目</a>
+    <a href="#thinking">技术与文章</a>
+    <a href={site.corporateUrl} rel="external">访问公司主站 <ArrowIcon direction="external" /></a>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLElement>("[data-nav-toggle]");
+  const mobileNav = document.querySelector<HTMLElement>("[data-mobile-nav]");
+
+  const closeNav = () => {
+    if (!toggle || !mobileNav) return;
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "打开导航");
+    mobileNav.hidden = true;
+    document.body.classList.remove("nav-open");
+  };
+
+  toggle?.addEventListener("click", () => {
+    if (!mobileNav) return;
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "打开导航" : "关闭导航");
+    mobileNav.hidden = isOpen;
+    document.body.classList.toggle("nav-open", !isOpen);
+  });
+
+  mobileNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNav));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 800) closeNav();
+  });
+</script>

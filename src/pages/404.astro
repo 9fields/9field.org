@@ -1,0 +1,18 @@
+---
+import ArrowIcon from "../components/ArrowIcon.astro";
+import Brand from "../components/Brand.astro";
+import ContourField from "../components/ContourField.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="页面未找到 · 九野 9FIELD" description="你访问的页面不存在。">
+  <main class="not-found" id="main-content">
+    <ContourField variant="hero" />
+    <div class="not-found__header shell"><Brand inverted /></div>
+    <div class="not-found__content shell">
+      <p>404</p>
+      <h1>这片原野还没有路径。</h1>
+      <a class="button button--light" href="/">返回首页 <ArrowIcon /></a>
+    </div>
+  </main>
+</BaseLayout>

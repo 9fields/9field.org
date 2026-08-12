@@ -1,0 +1,23 @@
+---
+import ArrowIcon from "./ArrowIcon.astro";
+import ContourField from "./ContourField.astro";
+import Header from "./Header.astro";
+import { site } from "../data/site";
+---
+
+<section class="hero" id="home">
+  <Header />
+  <ContourField variant="hero" />
+  <div class="hero__content shell">
+    <h1>让想法，<br />长成辽阔的世界。</h1>
+    <p>{site.description}</p>
+    <div class="hero__actions">
+      <a class="button button--light" href="#about">探索九野 <ArrowIcon /></a>
+      <a class="button button--ghost" href={site.corporateUrl} rel="external">访问 9field.cn <ArrowIcon direction="external" /></a>
+    </div>
+  </div>
+  <a class="hero__scroll" href="#about" aria-label="滚动到关于九野">
+    <span>向下探索</span>
+    <ArrowIcon direction="down" />
+  </a>
+</section>
