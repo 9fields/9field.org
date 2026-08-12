@@ -1,0 +1,31 @@
+---
+interface Props {
+  variant?: "hero" | "light" | "split";
+}
+
+const { variant = "hero" } = Astro.props;
+const pathSet = [
+  "M-80 276C118 141 260 361 460 218S794 133 960 251s329 130 560-39",
+  "M-82 306C92 184 283 389 474 247s326-76 488 41 334 111 558-52",
+  "M-85 338C72 226 303 419 488 279s315-67 476 47 339 91 558-54",
+  "M-90 372C65 265 320 451 504 315s299-66 459 50 344 74 558-55",
+  "M-94 407C70 300 337 482 525 351s280-73 440 50 344 65 558-55",
+  "M-98 444C88 330 352 514 551 385s257-84 418 47 342 65 558-53",
+  "M-104 482C118 357 372 548 582 417s234-91 396 41 337 77 552-42",
+  "M-112 520C153 385 393 580 618 447s209-92 373 34 326 97 540-25",
+];
+---
+
+<svg class:list={["contour-field", `contour-field--${variant}`]} viewBox="0 0 1440 620" preserveAspectRatio="none" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1">
+    {pathSet.map((path, index) => <path d={path} opacity={0.2 + index * 0.07}></path>)}
+  </g>
+  {variant === "hero" && (
+    <g class="contour-signals" fill="currentColor">
+      <circle cx="596" cy="455" r="3"></circle>
+      <circle cx="916" cy="282" r="2.5"></circle>
+      <circle cx="1186" cy="365" r="3"></circle>
+      <path d="M596 455v-56M916 282v-38M1186 365v-64" stroke="currentColor" stroke-width="1"></path>
+    </g>
+  )}
+</svg>

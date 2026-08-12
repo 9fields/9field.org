@@ -1,0 +1,25 @@
+---
+import ContourField from "./ContourField.astro";
+import { directions } from "../data/site";
+---
+
+<section class="directions section-light" id="about">
+  <ContourField variant="light" />
+  <div class="shell directions__inner">
+    <header class="section-heading">
+      <h2>我们关注正在发生的变化</h2>
+      <p>从产品体验到开放技术，再到值得长期追问的问题。九野希望让探索留下清晰、可复用的路径。</p>
+    </header>
+    <div class="direction-list">
+      {directions.map((direction) => (
+        <article class="direction-item">
+          <span class="direction-item__number">{direction.number}</span>
+          <div>
+            <h3>{direction.title}</h3>
+            <p>{direction.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
