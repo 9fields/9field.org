@@ -90,13 +90,25 @@ svg {
 }
 
 .brand {
-  display: inline-grid;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   color: var(--text);
   line-height: 1;
 }
 
 .brand--inverted {
   color: #f1efe8;
+}
+
+.brand__mark {
+  display: block;
+  width: 40px;
+  height: auto;
+}
+
+.brand__wordmark {
+  display: grid;
 }
 
 .brand__han {
@@ -558,6 +570,18 @@ svg {
   padding-bottom: 65px;
 }
 
+.site-footer__identity {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.site-footer__mark {
+  display: block;
+  width: 68px;
+  height: auto;
+}
+
 .site-footer__brand {
   margin: 0;
   font-family: var(--serif);
@@ -710,6 +734,10 @@ svg {
 
   .brand__han {
     font-size: 24px;
+  }
+
+  .brand__mark {
+    width: 32px;
   }
 
   .brand__latin {
@@ -979,6 +1007,14 @@ svg {
 
   .site-footer__brand {
     font-size: 34px;
+  }
+
+  .site-footer__identity {
+    gap: 16px;
+  }
+
+  .site-footer__mark {
+    width: 56px;
   }
 
   .site-footer__top a {

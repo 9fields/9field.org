@@ -9,6 +9,9 @@ const { inverted = false } = Astro.props;
 ---
 
 <a class:list={["brand", { "brand--inverted": inverted }]} href="/" aria-label={`${site.companyName}（简称${site.shortName}）首页`}>
-  <span class="brand__han">{site.shortName}</span>
-  <span class="brand__latin">{site.latinTrademark}</span>
+  <img class="brand__mark" src="/jiuye-tongqu-trademark.svg" alt="" width="40" height="45" />
+  <span class="brand__wordmark">
+    <span class="brand__han">{site.shortName}</span>
+    <span class="brand__latin">{site.latinTrademark}</span>
+  </span>
 </a>
