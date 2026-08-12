@@ -3,7 +3,7 @@ export const site = {
   latinName: "9FIELD",
   description:
     "九野的品牌、产品与技术门户。我们在这里持续发布正在构建的项目、开放成果与思考。",
-  corporateUrl: "https://9field.cn",
+  corporateUrl: "https://9fields.cn/",
   publicGithubUrl: "https://github.com/9fields",
   internalGithubUrl: "https://github.com/JiuyeTongqu",
 } as const;
