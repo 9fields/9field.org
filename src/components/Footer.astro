@@ -7,13 +7,16 @@ import { site } from "../data/site";
   <div class="shell">
     <div class="site-footer__top">
       <div>
-        <p class="site-footer__brand">九野 <span>9FIELD</span></p>
-        <p class="site-footer__note">品牌、产品与技术门户</p>
+        <p class="site-footer__brand">{site.companyName} <span>{site.latinTrademark}</span></p>
+        <p class="site-footer__note">简称“{site.shortName}” · 品牌、产品与技术门户</p>
       </div>
       <a href={site.corporateUrl} rel="external">公司主站 9fields.cn <ArrowIcon direction="external" /></a>
     </div>
     <div class="site-footer__bottom">
-      <p>© 2026 九野</p>
+      <div class="site-footer__rights">
+        <p>© 2026 {site.companyName}。保留所有权利。</p>
+        <p>公司对“{site.companyName}”与“{site.latinTrademark}”享有商标及相关著作权（版权）权益。</p>
+      </div>
       <a href="#home">回到顶部 <ArrowIcon direction="right" /></a>
     </div>
   </div>
